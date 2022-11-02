@@ -44,6 +44,10 @@ body {
     border-left: 1px solid #d6d6d6;
 }
 
+.border_top{
+    border-top: 1px solid #e9ebeb;
+}
+
 .account_header,
 .chat_header {
     background-color: #eaeaea;
