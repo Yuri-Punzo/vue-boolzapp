@@ -20,27 +20,54 @@
     <div class="container">
         <div class="row">
             <div class="col-4">
-                <div class="account_header">
+                <div class="account_header d-flex justify-content-between align-items-center">
                     <div>
                         <img class="avatars" src="./assets/img/avatar_io.jpg" alt="#">
-                        <span class="fw-bold">Yuri</span>
+                        <span class="fw-semibold">Yuri</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
-                <!-- /.app_header -->
-                <div class="notification_alert"></div>
+                <!-- /.account_header -->
+                <div class="notification_alert d-flex align-items-center">
+                    <i class="fa-solid fa-bell-slash round_icon"></i>
+                    <div class="d-flex flex-column">
+                        <span>Ricevi notifiche di nuovi messaggi</span>
+                        <a class="active_notify" href="">Attiva notifiche desktop</a>
+                    </div>
+                </div>
                 <!-- /.notification_alert -->
-                <div class="search_bar"></div>
+                <div class="search_bar text-center">
+                    <input type="search" placeholder="Cerca o inizia una nuova chat" name="" id="">
+                </div>
                 <!-- /.search_bar -->
-                <div class="all_chats"></div>
+                <div class="all_chats">
+
+                </div>
+                <!-- /.all_chats -->
             </div>
             <div class="col-8">
-                <div class="chat_header">
-                    <img class="avatars" src="./assets/img/avatar_1.jpg" alt="#">
+                <div class="chat_header d-flex justify-content-between align-items-center">
+                    <div>
+
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
                 </div>
                 <!-- /.chat_header -->
-                <div class="chat_main"></div>
+                <div class="chat_main">
+
+                </div>
                 <!-- /.chat_main -->
-                <div class="chat_footer"></div>
+                <div class="chat_footer">
+                    <input type="text" placeholder="scrivi un messaggio">
+                </div>
                 <!-- /.chat_footer -->
             </div>
         </div>
