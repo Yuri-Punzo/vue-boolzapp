@@ -10,6 +10,7 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
+            activeElement: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -176,7 +177,9 @@ createApp({
         }
     },
     methods: {
-        
+        selectChat(i) {
+            this.activeElement = i
+        }
     }
 
 }).mount("#app")

@@ -151,3 +151,12 @@ body {
     color: #6b7376;
     font-size: 25px;
 }
+
+.active {
+    background-color: #e9ebeb;
+}
+
+.last_acces{
+    font-size: 14px;
+    color: gray;
+}
