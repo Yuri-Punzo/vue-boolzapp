@@ -17,9 +17,9 @@
         <div class="green_background"></div>
         <div class="gray_background"></div>
     </div>
-    <div class="container">
+    <div class="container my_container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 col_4">
                 <div class="account_header d-flex justify-content-between align-items-center">
                     <div>
                         <img class="avatars" src="./assets/img/avatar_io.jpg" alt="#">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <!-- /.account_header -->
-                <div class="notification_alert d-flex align-items-center">
+                <div class="notification_bar d-flex align-items-center">
                     <i class="fa-solid fa-bell-slash round_icon"></i>
                     <div class="d-flex flex-column">
                         <span>Ricevi notifiche di nuovi messaggi</span>
@@ -40,8 +40,13 @@
                     </div>
                 </div>
                 <!-- /.notification_alert -->
-                <div class="search_bar text-center">
-                    <input type="search" placeholder="Cerca o inizia una nuova chat" name="" id="">
+                <div class="search_bar d-flex justify-content-center align-items-center">
+                    <div class="input-group my_input_group">
+                        <button class="btn btn-outline-secondary my_button" type="button" id="button-addon1">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                      </div>
                 </div>
                 <!-- /.search_bar -->
                 <div class="all_chats">
@@ -49,10 +54,9 @@
                 </div>
                 <!-- /.all_chats -->
             </div>
-            <div class="col-8">
+            <div class="col-8 col_8">
                 <div class="chat_header d-flex justify-content-between align-items-center">
                     <div>
-
                     </div>
                     <div>
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -65,8 +69,10 @@
 
                 </div>
                 <!-- /.chat_main -->
-                <div class="chat_footer">
-                    <input type="text" placeholder="scrivi un messaggio">
+                <div class="chat_footer d-flex justify-content-evenly align-items-center">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" placeholder="  Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
                 </div>
                 <!-- /.chat_footer -->
             </div>
