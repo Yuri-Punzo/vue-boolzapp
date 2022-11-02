@@ -117,6 +117,19 @@ body {
     overflow-y: scroll;
 }
 
+.last_message_time{
+    position: absolute;
+    top: 0;
+    left: 300px;
+    color: gray;
+    font-size: 12px;
+}
+
+.last_message_sent{
+    font-size: 14px;
+    color: gray;
+}
+
 .chat_main {
     height: calc(95vh - 140px);
     background-image: url(../img/mine.jpg);
