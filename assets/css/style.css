@@ -117,6 +117,14 @@ body {
     color: #b1b1b1;
 }
 
+.search_bar input:focus {
+    box-shadow: none;
+}
+
+.search_bar button:hover {
+    cursor: default;
+}
+
 .all_chats {
     height: calc(95vh - 200px);
     background-color: white;
@@ -176,7 +184,7 @@ body {
 }
 
 .received {
-    background-color: white;    
+    background-color: white;
 }
 
 .sent {

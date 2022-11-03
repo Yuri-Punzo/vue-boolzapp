@@ -12,104 +12,106 @@
     <title>Boolzapp</title>
 </head>
 
-<body id="app">
-    <div class="app_background">
-        <div class="green_background"></div>
-        <div class="gray_background"></div>
-    </div>
-    <div class="container my_container">
-        <div class="row">
-            <div class="col-4 col_4">
-                <div class="account_header d-flex justify-content-between align-items-center">
-                    <div>
-                        <img class="avatars" src="./assets/img/avatar_io.jpg" alt="#">
-                        <span class="fw-bold">Yuri</span>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </div>
-                <!-- /.account_header -->
-                <div class="notification_bar d-flex align-items-center">
-                    <i class="fa-solid fa-bell-slash round_icon"></i>
-                    <div class="d-flex flex-column">
-                        <span>Ricevi notifiche di nuovi messaggi</span>
-                        <a class="active_notify" href="">Attiva notifiche desktop</a>
-                    </div>
-                </div>
-                <!-- /.notification_alert -->
-                <div class="search_bar d-flex justify-content-center align-items-center">
-                    <div class="input-group my_input_group">
-                        <button class="my_button" type="button" id="button-addon1">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
-                            aria-label="Example text with button addon" aria-describedby="button-addon1">
-                    </div>
-                </div>
-                <!-- /.search_bar -->
-                <div class="all_chats">
-                    <div class="contatcs_chats d-flex justify-content-start align-items-center border_top position-relative"
-                        v-for="(contact,i) in contacts" @click.stop="selectChat(i)"
-                        :class="i === activeElement ? 'active' : '' ">
+<body>
+    <div id="app">
+        <div class="app_background">
+            <div class="green_background"></div>
+            <div class="gray_background"></div>
+        </div>
+        <div class="container my_container">
+            <div class="row">
+                <div class="col-4 col_4">
+                    <div class="account_header d-flex justify-content-between align-items-center">
                         <div>
-                            <img :src=`./assets/img/avatar${contact.avatar}.jpg` class="avatars" alt="#">
+                            <img class="avatars" src="./assets/img/avatar_io.jpg" alt="#">
+                            <span class="fw-bold">Yuri</span>
                         </div>
+                        <div>
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    <!-- /.account_header -->
+                    <div class="notification_bar d-flex align-items-center">
+                        <i class="fa-solid fa-bell-slash round_icon"></i>
                         <div class="d-flex flex-column">
-                            <span class="fw-bold">{{contact.name}}</span>
-                            <span class="last_message_sent">Ultimo messaggio inviato</span>
-                            <div class="last_message_time">12:00</div>
+                            <span>Ricevi notifiche di nuovi messaggi</span>
+                            <a class="active_notify" href="">Attiva notifiche desktop</a>
                         </div>
                     </div>
-                </div>
-                <!-- /.all_chats -->
-            </div>
-            <div class="col-8 col_8">
-                <div class="chat_header d-flex align-items-center justify-content-between">
-                    <div class="d-flex align-items-center">
-                        <img :src=`./assets/img/avatar${contacts[activeElement].avatar}.jpg` class="avatars" alt="#">
-                        <div>
+                    <!-- /.notification_alert -->
+                    <div class="search_bar d-flex justify-content-center align-items-center">
+                        <div class="input-group my_input_group">
+                            <button class="my_button" type="button" id="button-addon1">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
+                                aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        </div>
+                    </div>
+                    <!-- /.search_bar -->
+                    <div class="all_chats">
+                        <div class="contatcs_chats d-flex justify-content-start align-items-center border_top position-relative"
+                            v-for="(contact,i) in contacts" @click.stop="selectChat(i)"
+                            :class="i === activeElement ? 'active' : '' ">
+                            <div>
+                                <img :src=`./assets/img/avatar${contact.avatar}.jpg` class="avatars" alt="#">
+                            </div>
                             <div class="d-flex flex-column">
-                                <span class="fw-bold">{{contacts[activeElement].name}}</span>
-                                <span class="last_acces">Ultimo accesso oggi alle 12:00</span>
+                                <span class="fw-bold">{{contact.name}}</span>
+                                <span class="last_message_sent">Ultimo messaggio inviato</span>
+                                <div class="last_message_time">12:00</div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="d-flex justify-content-end">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <i class="fa-solid fa-paperclip"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
+                    <!-- /.all_chats -->
                 </div>
-                <!-- /.chat_header -->
-                <div class="chat_main">
-                    <div v-for="(messageInfo,j) in contacts[activeElement].messages" class="d-flex flex-column">
-                        <div :class="messageInfo.status === 'received' ? 'received' : 'sent' "
-                            class="d-flex position-relative">
-                            <span>
-                                {{messageInfo.message}}
-                            </span>
-                            <span class="message_time">
-                                {{messageInfo.date}}
-                            </span>
+                <div class="col-8 col_8">
+                    <div class="chat_header d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <img :src=`./assets/img/avatar${contacts[activeElement].avatar}.jpg` class="avatars"
+                                alt="#">
+                            <div>
+                                <div class="d-flex flex-column">
+                                    <span class="fw-bold">{{contacts[activeElement].name}}</span>
+                                    <span class="last_acces">Ultimo accesso oggi alle 12:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
                     </div>
+                    <!-- /.chat_header -->
+                    <div class="chat_main">
+                        <div v-for="(messageInfo,j) in contacts[activeElement].messages" class="d-flex flex-column">
+                            <div :class="messageInfo.status === 'received' ? 'received' : 'sent' "
+                                class="d-flex position-relative">
+                                <span>
+                                    {{messageInfo.message}}
+                                </span>
+                                <span class="message_time">
+                                    {{messageInfo.date}}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.chat_main -->
+                    <div class="chat_footer d-flex justify-content-evenly align-items-center">
+                        <i class="fa-regular fa-face-smile"></i>
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio"
+                            @keyup.enter="sendMessage" v-model="newMessage.message">
+                        <i class="fa-solid fa-microphone"></i>
+                    </div>
+                    <!-- /.chat_footer -->
                 </div>
-                <!-- /.chat_main -->
-                <div class="chat_footer d-flex justify-content-evenly align-items-center">
-                    <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" class="form-control" placeholder="Scrivi un messaggio" @keyup.enter="sendMessage"
-                        v-model="newMessage.message">
-                    <i class="fa-solid fa-microphone"></i>
-                </div>
-                <!-- /.chat_footer -->
             </div>
         </div>
     </div>
-
 
 
 
