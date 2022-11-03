@@ -12,7 +12,7 @@ createApp({
         return {
             searchInput: '',
             newMessage: {
-                date: 'XXXX',
+                date: 'hh:mm',
                 message: '',
                 status: 'sent'
             },
@@ -215,15 +215,20 @@ createApp({
             clearInterval(this.intervalId)
         },
         realTimeSearch() {
-            if (contacts.name.toLowerCase().includes(searchInput.toLowerCase())) {
-                contacts.visible = true
-            } else {
-                contacts.visible = false
-            }
+            this.contacts.forEach(contact => {
+                console.log(contact.name);
+                console.log(this.searchInput);               
+                /* if (contact.name.toLowerCase().includes(this.searchInput.toLowerCase())) {
+                    contact.visible = true
+                } else {
+                    contact.visible = false
+                } */
+            });
+
         }
     },
     mounted() {
         this.realTimeSearch()
-      }
+    }
 
 }).mount("#app")
