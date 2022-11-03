@@ -216,19 +216,14 @@ createApp({
         },
         realTimeSearch() {
             this.contacts.forEach(contact => {
-                console.log(contact.name);
-                console.log(this.searchInput);               
-                /* if (contact.name.toLowerCase().includes(this.searchInput.toLowerCase())) {
+                //console.log(contact.name);
+                //console.log(this.searchInput);
+                if (contact.name.toLowerCase().includes(this.searchInput.toLowerCase())) {
                     contact.visible = true
                 } else {
                     contact.visible = false
-                } */
-            });
-
+                }
+            })
         }
-    },
-    mounted() {
-        this.realTimeSearch()
     }
-
 }).mount("#app")

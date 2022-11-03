@@ -46,15 +46,17 @@
                             <button class="my_button" type="button" id="button-addon1">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="form-control" aria-label="Example text with button addon" aria-describedby="button-addon1" v-model="searchInput">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="form-control"
+                                aria-label="Example text with button addon" aria-describedby="button-addon1"
+                                v-model="searchInput" @keyup="realTimeSearch">
                         </div>
                     </div>
                     <!-- /.search_bar -->
                     <div class="all_chats">
-                        <div class="contatcs_chats" v-for="(contact,i) in contacts" @click.stop="selectChat(i)"
+                        <div class="contatcs_chats"
+                            v-for="(contact,i) in contacts" @click.stop="selectChat(i)"
                             :class="i === activeElement ? 'active' : '' ">
-                            <div v-if="contact.visible"
-                                class="d-flex justify-content-start align-items-center border_top position-relative">
+                            <div v-if="contact.visible" class="d-flex justify-content-start align-items-center border_top position-relative">
                                 <div>
                                     <img :src=`./assets/img/avatar${contact.avatar}.jpg` class="avatars" alt="#">
                                 </div>

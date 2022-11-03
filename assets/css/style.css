@@ -199,3 +199,7 @@ body {
     font-size: 11px;
     color: gray;
 }
+
+.d_none{
+    display: none;
+}
