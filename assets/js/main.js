@@ -10,8 +10,9 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            searchInput: '',
             newMessage: {
-                date: 'hh:mm',
+                date: 'XXXX',
                 message: '',
                 status: 'sent'
             },
@@ -212,7 +213,17 @@ createApp({
                 status: 'sent'
             }
             clearInterval(this.intervalId)
+        },
+        realTimeSearch() {
+            if (contacts.name.toLowerCase().includes(searchInput.toLowerCase())) {
+                contacts.visible = true
+            } else {
+                contacts.visible = false
+            }
         }
-    }
+    },
+    mounted() {
+        this.realTimeSearch()
+      }
 
 }).mount("#app")
