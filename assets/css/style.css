@@ -182,5 +182,6 @@ body {
     position: absolute;
     bottom: 2px;
     right: 4px;
-    font-size: 12px;
+    font-size: 11px;
+    color: gray;
 }
