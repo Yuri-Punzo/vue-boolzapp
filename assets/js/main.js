@@ -188,7 +188,7 @@ createApp({
         sendMessage() {
             this.contacts[this.activeElement].messages.push(this.newMessage);
             this.newMessage = {
-                date: 'XXXX',
+                date: 'hh:mm',
                 message: '',
                 status: 'sent'
             }
@@ -199,15 +199,15 @@ createApp({
         },
         autoAnswer() {
             this.newMessage = {
-                date: 'XXXX',
+                date: 'hh:mm',
                 message: 'Ok',
                 status: 'received'
             }
 
             this.contacts[this.activeElement].messages.push(this.newMessage);
-            
+
             this.newMessage = {
-                date: 'XXXX',
+                date: 'hh:mm',
                 message: '',
                 status: 'sent'
             }
