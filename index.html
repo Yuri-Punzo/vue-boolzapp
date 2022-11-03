@@ -86,8 +86,16 @@
                 </div>
                 <!-- /.chat_header -->
                 <div class="chat_main">
-                    <div v-for="(message,i) in contacts[activeElement].messages">
-                        <div>{{message}}</div> 
+                    <div v-for="(messageInfo,i) in contacts[activeElement].messages" class="d-flex flex-column">
+                        <div :class="messageInfo.status === 'received' ? 'received' : 'sent' "
+                            class="d-flex position-relative">
+                            <span>
+                                {{messageInfo.message}}
+                            </span>
+                            <span class="message_time">
+                                {{messageInfo.date}}
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <!-- /.chat_main -->

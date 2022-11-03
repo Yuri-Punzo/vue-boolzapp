@@ -44,7 +44,7 @@ body {
     border-left: 1px solid #d6d6d6;
 }
 
-.border_top{
+.border_top {
     border-top: 1px solid #e9ebeb;
 }
 
@@ -117,7 +117,7 @@ body {
     overflow-y: scroll;
 }
 
-.last_message_time{
+.last_message_time {
     position: absolute;
     top: 0;
     left: 300px;
@@ -125,7 +125,7 @@ body {
     font-size: 12px;
 }
 
-.last_message_sent{
+.last_message_sent {
     font-size: 14px;
     color: gray;
 }
@@ -156,7 +156,31 @@ body {
     background-color: #e9ebeb;
 }
 
-.last_acces{
+.last_acces {
     font-size: 14px;
     color: gray;
+}
+
+.received,
+.sent {
+    padding: 20px;
+    border-radius: 5px;
+    margin: 1rem;
+    max-width: 300px;
+}
+
+.received {
+    background-color: white;    
+}
+
+.sent {
+    background-color: #d5f9ba;
+    align-self: end;
+}
+
+.message_time {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    font-size: 12px;
 }
