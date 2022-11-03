@@ -104,11 +104,17 @@ body {
     width: 17%;
     background-color: white;
     border: 1px solid #ced4da;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .search_bar {
     height: 50px;
     background-color: #fafafa;
+}
+
+.search_bar i {
+    color: #b1b1b1;
 }
 
 .all_chats {
