@@ -119,8 +119,8 @@ body {
 
 .last_message_time {
     position: absolute;
-    top: 0;
-    left: 300px;
+    top: 2px;
+    right: 4px;
     color: gray;
     font-size: 12px;
 }
