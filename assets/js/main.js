@@ -224,6 +224,9 @@ createApp({
                     contact.visible = false
                 }
             })
+        },
+        openDeleteWindow() {
+            console.log("clicked");
         }
     }
 }).mount("#app")
