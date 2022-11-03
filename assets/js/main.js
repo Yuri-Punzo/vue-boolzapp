@@ -11,7 +11,7 @@ createApp({
     data() {
         return {
             newMessage: {
-                date: 'XXXX',
+                date: 'hh:mm',
                 message: '',
                 status: 'sent'
             },
