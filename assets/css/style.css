@@ -227,3 +227,7 @@ body {
 .my_message:hover .popup_menu {
 display: block;
 }
+
+.popup_menu:hover {
+    cursor: pointer;
+}
