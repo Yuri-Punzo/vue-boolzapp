@@ -102,7 +102,7 @@
                         <div v-for="(messageInfo,jIndex) in contacts[activeElement].messages"
                             class="d-flex flex-column">
                             <div :class="messageInfo.status === 'received' ? 'received' : 'sent' "
-                                class="d-flex position-relative">
+                                class="d-flex position-relative my_message">
                                 <span>
                                     {{messageInfo.message}}
                                 </span>

@@ -208,6 +208,7 @@ body {
     position: absolute;
     top: 0;
     right: 2px;
+    display: none;
 }
 
 .my_dropdown_button {
@@ -221,4 +222,8 @@ body {
     margin: 0;
     padding: 5px 0;
     text-align: center;
+}
+
+.my_message:hover .popup_menu {
+display: block;
 }
