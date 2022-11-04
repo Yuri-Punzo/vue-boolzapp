@@ -10,7 +10,6 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            popupVisible: false,
             searchInput: '',
             newMessage: {
                 date: 'dd/mm/yyyy hh:mm:ss',
@@ -226,31 +225,9 @@ createApp({
                 }
             })
         },
-        popupMenu(jIndex) {
-            console.log("clicked", jIndex);
-            const singleMessage = this.contacts[this.activeElement].messages[jIndex]
-            console.log(singleMessage);
-            /* singleMessage.classList.remove("popup_d_none") */
-            singleMessage.push(this.popupVisible = true);
-            console.log(singleMessage);
-
-
-            //al click del singolo messaggio il pop up appare e scompare se si clicca da altre parti
-            //pusho nell'array dei messaggi un qualcosa con valore true e metto la disattivazione di quella classe
-            //potrei pushare subito all'inizio con un mounted il valore di popupVisible in tutti i messaggi e poi dopo modificarlo con la funzione
-
-        },
         deleteMessage(jIndex){
-            console.log(jIndex);
-            //object message[jIndex] .splice dall'array di object messages
+            //console.log(jIndex);
+            this.contacts[this.activeElement].messages.splice(jIndex, 1);
         }
     }
 }).mount("#app")
-
-
-//creo una sezione di html con position absolute con il menu dentro e lo rendo invisibile
-//al click diventerà visbile
-//deve avere a sua volta un @click sul div "delete message"
-//al click delete usando splice eliminiano l'oggetto messaggio dall'array
-
-//a

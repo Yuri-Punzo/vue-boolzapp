@@ -206,17 +206,19 @@ body {
 
 .popup_menu {
     position: absolute;
-    top: 7px;
-    right: 7px;
-    background-color: white;
-    border-radius: 5px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    padding: 0 8px;
-    box-shadow: 0 0 8px 2px  #787879;
+    top: 0;
+    right: 2px;
 }
 
-.popup_d_none {
-    display: none;
+.my_dropdown_button {
+    background: none;
+    border: none;
+    color: gray;
+    padding: 0 10px;
+}
+
+.my_dropdown_menu {
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
 }
