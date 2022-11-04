@@ -12,7 +12,7 @@ createApp({
         return {
             searchInput: '',
             newMessage: {
-                date: 'hh:mm',
+                date: 'dd/mm/yyyy hh:mm:ss',
                 message: '',
                 status: 'sent'
             },
@@ -189,7 +189,7 @@ createApp({
         sendMessage() {
             this.contacts[this.activeElement].messages.push(this.newMessage);
             this.newMessage = {
-                date: 'hh:mm',
+                date: 'dd/mm/yyyy hh:mm:ss',
                 message: '',
                 status: 'sent'
             }
@@ -200,7 +200,7 @@ createApp({
         },
         autoAnswer() {
             this.newMessage = {
-                date: 'hh:mm',
+                date: 'dd/mm/yyyy hh:mm:ss',
                 message: 'Ok',
                 status: 'received'
             }
@@ -208,7 +208,7 @@ createApp({
             this.contacts[this.activeElement].messages.push(this.newMessage);
 
             this.newMessage = {
-                date: 'hh:mm',
+                date: 'dd/mm/yyyy hh:mm:ss',
                 message: '',
                 status: 'sent'
             }
