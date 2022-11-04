@@ -65,7 +65,8 @@
                                     <span class="last_message_sent">
                                         {{contact.messages[contact.messages.length-1].message}}
                                     </span>
-                                    <div class="last_message_time">{{contact.messages[contact.messages.length-1].date.substr(11, 5)}}
+                                    <div class="last_message_time">
+                                        {{contact.messages[contact.messages.length-1].date.substr(11, 5)}}
                                     </div>
                                 </div>
                             </div>
@@ -97,10 +98,9 @@
                     </div>
                     <!-- /.chat_header -->
                     <div class="chat_main">
-                        <div v-for="(messageInfo,j) in contacts[activeElement].messages" class="d-flex flex-column"
-                            @click="openDeleteWindow">
+                        <div v-for="(messageInfo,j) in contacts[activeElement].messages" class="d-flex flex-column">
                             <div :class="messageInfo.status === 'received' ? 'received' : 'sent' "
-                                class="d-flex position-relative">
+                                class="d-flex position-relative" @click="openDeleteWindow">
                                 <span>
                                     {{messageInfo.message}}
                                 </span>
