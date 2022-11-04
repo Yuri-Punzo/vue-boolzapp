@@ -200,6 +200,23 @@ body {
     color: gray;
 }
 
-.d_none{
+.d_none {
+    display: none;
+}
+
+.popup_menu {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    background-color: white;
+    border-radius: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    box-shadow: 0 0 8px 2px  #787879;
+}
+
+.popup_d_none {
     display: none;
 }

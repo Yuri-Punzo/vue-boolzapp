@@ -98,14 +98,18 @@
                     </div>
                     <!-- /.chat_header -->
                     <div class="chat_main">
-                        <div v-for="(messageInfo,j) in contacts[activeElement].messages" class="d-flex flex-column">
+                        <div v-for="(messageInfo,jIndex) in contacts[activeElement].messages" class="d-flex flex-column">
                             <div :class="messageInfo.status === 'received' ? 'received' : 'sent' "
-                                class="d-flex position-relative" @click="openDeleteWindow">
-                                <span>
+                                class="d-flex position-relative" @click.stop="popupMenu(jIndex)">
+                                <!-- aggiungere V-IF V-ELSE per quando non ci sono più messaggi, altrimenti si romperà tutto -->
+                                <span> 
                                     {{messageInfo.message}}
                                 </span>
                                 <span class="message_time">
                                     {{messageInfo.date.substr(11, 5)}}
+                                </span>
+                                <span class="popup_menu" @click.stop="deleteMessage(jIndex)" :class="{popup_d_none : !stiCazzi}">
+                                    Delete Message
                                 </span>
                             </div>
                         </div>
