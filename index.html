@@ -108,7 +108,7 @@
                                 <span class="message_time">
                                     {{messageInfo.date.substr(11, 5)}}
                                 </span>
-                                <span class="popup_menu" @click.stop="deleteMessage(jIndex)" :class="{popup_d_none : !stiCazzi}">
+                                <span class="popup_menu" @click.stop="deleteMessage(jIndex)" :class="{popup_d_none : !popupVisible}">
                                     Delete Message
                                 </span>
                             </div>

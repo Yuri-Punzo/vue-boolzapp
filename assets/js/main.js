@@ -10,7 +10,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            stiCazzi: false,
+            popupVisible: false,
             searchInput: '',
             newMessage: {
                 date: 'dd/mm/yyyy hh:mm:ss',
@@ -231,12 +231,13 @@ createApp({
             const singleMessage = this.contacts[this.activeElement].messages[jIndex]
             console.log(singleMessage);
             /* singleMessage.classList.remove("popup_d_none") */
-            singleMessage.push(this.stiCazzi = true);
+            singleMessage.push(this.popupVisible = true);
             console.log(singleMessage);
 
 
             //al click del singolo messaggio il pop up appare e scompare se si clicca da altre parti
-            //pusho nell'array dei messaggi un qualcosa con valore true e metto la disattivazione di quella classe 
+            //pusho nell'array dei messaggi un qualcosa con valore true e metto la disattivazione di quella classe
+            //potrei pushare subito all'inizio con un mounted il valore di popupVisible in tutti i messaggi e poi dopo modificarlo con la funzione
 
         },
         deleteMessage(jIndex){
